@@ -91,6 +91,6 @@ if ($toi =~ m/top news stories/i) {
         my $href = $target.return_between($link,"href=\"","\"",$EXCL);
         push(@toi_links,$title,$href);
     }
-    print_array();
+    print_array(@toi_links);
 }
 
