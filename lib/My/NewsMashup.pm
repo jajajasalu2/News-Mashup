@@ -3,7 +3,7 @@ package My::NewsMashup;
 use strict;
 use warnings;
 use Exporter qw(import);
-our @EXPORT_OK = qw(rt toi hacker_news mumbai_mirror wsj);
+our @EXPORT_OK = qw(rt toi hacker_news mumbai_mirror wsj verge);
 
 #variables used in split_string to print the content of a string before or after a deliminator, or
 #to include/exclude deliminators.

@@ -2,7 +2,7 @@
 use File::Basename qw(dirname);
 use Cwd  qw(abs_path);
 use lib dirname(dirname abs_path $0) . '/lib';
-use My::NewsMashup qw(rt toi hacker_news mumbai_mirror wsj);
+use My::NewsMashup qw(rt toi hacker_news mumbai_mirror wsj verge);
 use CGI qw/:standard/;
 
 sub print_links {
@@ -16,6 +16,7 @@ sub print_links {
     }
 }
 
+
 sub print_news {
     # my %rt = rt();
     # my %toi = toi();
@@ -26,6 +27,7 @@ sub print_news {
 <html>
 <head>
 <title>NewsMashup</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 <body>
@@ -80,6 +82,15 @@ sub print_news {
             <div class="card">
                 <ul class="list-group list-group-flush">};
             print_links(wsj());
+            print qq{
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3>The Verge</h3>
+            <div class="card">
+                <ul class="list-group list-group-flush">};
+            print_links(verge());
             print qq{
                 </ul>
             </div>
