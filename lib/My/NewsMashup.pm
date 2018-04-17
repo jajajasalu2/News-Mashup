@@ -141,7 +141,7 @@ sub hacker_news {
 }
 
 sub wsj {
-    my $target = "https://www.wsj.com/";
+    my $target = "https://www.wsj.com/india";
     my $wsj = `curl $target`;
     $wsj = remove_tags($wsj,"<script","</script>");
     my %wsj_links = ();
